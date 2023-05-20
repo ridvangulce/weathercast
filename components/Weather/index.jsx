@@ -34,6 +34,7 @@ const Weather = ({ data }) => {
                     </div>
                 </div>
             </div>
+           
         </div>
 
     )
