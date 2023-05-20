@@ -10,7 +10,7 @@ export default function Home() {
   const [weather, setWeather] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null)
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=tr&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`
 
   const fetchWeather = (e) => {
     e.preventDefault();
@@ -24,10 +24,10 @@ export default function Home() {
       .catch((error) => {
         setLoading(false);
         console.log(error); // Hata durumunu konsola yazdırabilirsiniz.
-      
-        setError("Weather data couldn't be retrieved. Please try again." );
+
+        setError("Weather data couldn't be retrieved. Please try again.");
       });
-      setError(null)
+    setError(null)
   }
 
 
